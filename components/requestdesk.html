@@ -5,71 +5,76 @@
   </head>
   <body>
     <div class="body_wrapper">
-      <div class="sticky-outer-wrapper" style="">
-        <div
-          class="sticky-inner-wrapper"
-          style="
-            position: relative;
-            z-index: 9999;
-            transform: translate3d(0px, 0px, 0px);
-          "
-        >
-          <header class="header_area">
-            <nav class="navbar navbar-expand-lg menu_one undefined">
-              <div class="container undefined">
-                <a class="navbar-brand undefined" href="/HR-Management"
-                  ><img src="/images/media/logo2.9566d751.png" alt="" /><img
-                    src="/images/media/logo2x.214c7508.png"
-                    alt="logo" /></a
-                ><button
-                  class="navbar-toggler collapsed"
-                  type="button"
-                  data-toggle="collapse"
-                  data-target="#navbarSupportedContent"
-                  aria-controls="navbarSupportedContent"
-                  aria-expanded="false"
-                  aria-label="Toggle navigation"
-                >
-                  <span class="menu_toggle"
-                    ><span class="hamburger"
-                      ><span></span><span></span><span></span></span
-                    ><span class="hamburger-cross"
-                      ><span></span><span></span></span
-                  ></span>
-                </button>
-                <div
-                  class="collapse navbar-collapse"
-                  id="navbarSupportedContent"
-                >
-                  <ul class="navbar-nav menu ml-auto undefined">
-                    <li class="nav-item">
-                      <a class="nav-link" title="Home" href="personalImp.html"
-                        >Home</a
+        <div class="sticky-outer-wrapper navbar_fixed" style="height: 0px">
+            <div
+              class="sticky-inner-wrapper"
+              style="
+                position: fixed;
+                z-index: 9999;
+                transform: translate3d(0px, 0px, 0px);
+                top: 0px;
+                width: 1903px;
+              "
+            >
+              <header class="header_area">
+                <nav class="navbar navbar-expand-lg menu_one undefined">
+                  <div class="container undefined">
+                    <a class="navbar-brand undefined" href="/HR-Management"
+                      ><img src="/images/media/logo2.9566d751.png" alt="" /><img
+                        src="/images/media/logo2x.214c7508.png"
+                        alt="logo" /></a
+                    ><button
+                      class="navbar-toggler collapsed"
+                      type="button"
+                      data-toggle="collapse"
+                      data-target="#navbarSupportedContent"
+                      aria-controls="navbarSupportedContent"
+                      aria-expanded="false"
+                      aria-label="Toggle navigation"
+                    >
+                      <span class="menu_toggle"
+                        ><span class="hamburger"
+                          ><span></span><span></span><span></span></span
+                        ><span class="hamburger-cross"
+                          ><span></span><span></span></span
+                      ></span>
+                    </button>
+                    <div
+                      class="collapse navbar-collapse"
+                      id="navbarSupportedContent"
+                    >
+                      <ul class="navbar-nav menu ml-auto undefined">
+                        <li class="nav-item">
+                          <a class="nav-link" title="Home" href="home.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                          <a
+                            class="nav-link active"
+                            title="Features"
+                            href="features.html"
+                            >Features</a
+                          >
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" title="About" href="about.html"
+                            >About</a
+                          >
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" title="Pricing" href="contact.html"
+                            >Contact</a
+                          >
+                        </li>
+                      </ul>
+                      <a class="btn_get btn_hover new_btn" href="signUp.html"
+                        >Get Started</a
                       >
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" title="Features" href="features.html" href="/Service"
-                        >Features</a
-                      >
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" title="About" href="/About">About</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" title="Pricing" href="/Contact"
-                        >Contact</a
-                      >
-                    </li>
-                  </ul>
-                  <a class="btn_get btn_hover new_btn" href="getstartedform"
-                    >Get Started</a
-                  >
-                </div>
-              </div>
-            </nav>
-          </header>
-        </div>
-      </div>
+                    </div>
+                  </div>
+                </nav>
+              </header>
+            </div>
+          </div>
       <section class="error_two_area"></section>
       <div class="jumbotron">
         <center>
@@ -298,7 +303,15 @@
         <div class="footer_top">
           <div class="container">
             <div class="row">
-              <div class="react-reveal col-lg-3 col-md-6">
+              <div
+                class="react-reveal fadeInUp col-lg-3 col-md-6"
+                style="
+                  animation-duration: 1000ms;
+                  animation-delay: 0ms;
+                  animation-iteration-count: 1;
+                  opacity: 1;
+                "
+              >
                 <div
                   class="f_widget company_widget wow fadeInLeft"
                   data-wow-delay="0.2s"
@@ -338,7 +351,15 @@
                   </form>
                 </div>
               </div>
-              <div class="react-reveal col-lg-3 col-md-6">
+              <div
+                class="react-reveal fadeInUp col-lg-3 col-md-6"
+                style="
+                  animation-duration: 1200ms;
+                  animation-delay: 0ms;
+                  animation-iteration-count: 1;
+                  opacity: 1;
+                "
+              >
                 <div
                   class="f_widget about-widget pl_70 wow fadeInLeft"
                   data-wow-delay="0.4s"
@@ -347,13 +368,21 @@
                     About Us
                   </h3>
                   <ul class="list-unstyled f_list">
-                    <li><a href="personalImp.html">Company</a></li>
-                      <li><a href="personalImp.html">Jobs</a></li>
-                      <li><a href="personalImp.html">Sitemap</a></li>
+                    <li><a href="home.html">Company</a></li>
+                    <li><a href="home.html">Jobs</a></li>
+                    <li><a href="home.html">Sitemap</a></li>
                   </ul>
                 </div>
               </div>
-              <div class="react-reveal col-lg-3 col-md-6">
+              <div
+                class="react-reveal fadeInUp col-lg-3 col-md-6"
+                style="
+                  animation-duration: 1400ms;
+                  animation-delay: 0ms;
+                  animation-iteration-count: 1;
+                  opacity: 1;
+                "
+              >
                 <div
                   class="f_widget about-widget pl_70 wow fadeInLeft"
                   data-wow-delay="0.4s"
@@ -363,19 +392,27 @@
                   </h3>
                   <ul class="list-unstyled f_list">
                     <li>
-                      <a href="personalinformation">Persoanl Management</a>
+                      <a href="performance.html">Persoanl Management</a>
                     </li>
-                    <li><a href="leavemanagement">Leave Management</a></li>
-                    <li><a href="timeattendence">Time Management</a></li>
+                    <li><a href="leave.html">Leave Management</a></li>
+                    <li><a href="timesheet.html">Time Management</a></li>
                     <li>
-                      <a href="systemadministration">System Administartion </a>
+                      <a href="systemaadmin.html">System Administartion </a>
                     </li>
-                    <li><a href="recruitment">Recruitment</a></li>
-                    <li><a href="requestdesk">Request Desk</a></li>
+                    <li><a href="recruitment.html">Recruitment</a></li>
+                    <li><a href="requestdesk.html">Request Desk</a></li>
                   </ul>
                 </div>
               </div>
-              <div class="react-reveal col-lg-3 col-md-6">
+              <div
+                class="react-reveal fadeInUp col-lg-3 col-md-6"
+                style="
+                  animation-duration: 1800ms;
+                  animation-delay: 0ms;
+                  animation-iteration-count: 1;
+                  opacity: 1;
+                "
+              >
                 <div
                   class="f_widget about-widget pl_70 wow fadeInLeft"
                   data-wow-delay="0.4s"
@@ -384,10 +421,10 @@
                     Security Policy
                   </h3>
                   <ul class="list-unstyled f_list">
-                    <li><a href="/">Privacy Policy</a></li>
-                    <li><a href="/">Service Privacy Policy</a></li>
-                    <li><a href="/">Business Policy</a></li>
-                    <li><a href="/">General Public License</a></li>
+                    <li><a href="home.html">Privacy Policy</a></li>
+                    <li><a href="home.html">Service Privacy Policy</a></li>
+                    <li><a href="home.html">Business Policy</a></li>
+                    <li><a href="home.html">General Public License</a></li>
                   </ul>
                 </div>
               </div>

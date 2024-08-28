@@ -21,7 +21,7 @@
     <div id="root">
       <div class="body_wrapper">
         <div class="sticky-outer-wrapper">
-          <div
+          <div id = "stickyDiv"
             class="sticky-inner-wrapper"
             style="
               position: relative;
@@ -29,7 +29,7 @@
               transform: translate3d(0px, 0px, 0px);
             "
           >
-            <header class="header_area">
+            <header id="header" class="header_area">
               <nav class="navbar navbar-expand-lg menu_one menu_four">
                 <div class="container undefined">
                   <a class="navbar-brand undefined" href="/HR-Management">
@@ -61,27 +61,27 @@
                   >
                     <ul class="navbar-nav menu ml-auto w_menu">
                       <li class="nav-item">
-                        <a class="nav-link" title="Home" href="personalImp.html"
+                        <a id = "home" class="nav-link active" title="Home" href="home.html"
                           >Home</a
                         >
                       </li>
                       <li class="nav-item">
-                        <a class="nav-link" title="Features" href="features.html"
+                        <a id = "features" class="nav-link" title="Features" href="features.html"
                           >Features</a
                         >
                       </li>
                       <li class="nav-item">
-                        <a class="nav-link" title="About" href="/About"
+                        <a id = "about" class="nav-link" title="About" href="about.html"
                           >About</a
                         >
                       </li>
                       <li class="nav-item">
-                        <a class="nav-link" title="Pricing" href="/Contact"
+                        <a id = "contact"class="nav-link" title="Pricing" href="contact.html"
                           >Contact</a
                         >
                       </li>
                     </ul>
-                    <a class="btn_get btn_hover undefined" href="getstartedform"
+                    <a id = "getstarted"class="btn_get btn_hover undefined" href="signUp.html"
                       >Get Started</a
                     >
                   </div>
@@ -123,7 +123,7 @@
                     That Brings Your Employees Together.
                   </p>
                   <a
-                    href="getstartedform"
+                    href="signUp.html"
                     class="btn_six slider_btn"
                     style="
                       animation-fill-mode: both;
@@ -481,7 +481,7 @@
                     onboarding module.
                   </p>
                   <a
-                    href="recruitment"
+                    href="recruitment.html"
                     style="
                       animation-fill-mode: both;
                       animation-duration: 1682ms;
@@ -815,7 +815,7 @@
                       Interested In What Rewa HR Can Do For You? Build Your
                       Custom HR Experience.
                     </h5>
-                    <br /><a href=".#" class="btn_six slider_btn"
+                    <br /><a href="home.html" class="btn_six slider_btn"
                       >Request A Quote</a
                     >
                   </center>
@@ -906,7 +906,7 @@
                           >System Administartion
                         </a>
                       </li>
-                      <li><a href="recruitment">Recruitment</a></li>
+                      <li><a href="recruitment.html">Recruitment</a></li>
                       <li><a href="requestdesk">Request Desk</a></li>
                     </ul>
                   </div>
@@ -920,10 +920,10 @@
                       Security Policy
                     </h3>
                     <ul class="list-unstyled f_list">
-                      <li><a href="personalImp.html">Privacy Policy</a></li>
-                      <li><a href="personalImp.html">Service Privacy Policy</a></li>
-                      <li><a href="personalImp.html">Business Policy</a></li>
-                      <li><a href="personalImp.html">General Public License</a></li>
+                      <li><a href="home.html">Privacy Policy</a></li>
+                      <li><a href="home.html">Service Privacy Policy</a></li>
+                      <li><a href="home.html">Business Policy</a></li>
+                      <li><a href="home.html">General Public License</a></li>
                     </ul>
                   </div>
                 </div>
@@ -970,4 +970,47 @@
       </div>
     </div>
   </body>
+  <script>
+    window.onscroll = function() {
+      var stickyDiv = document.getElementById("stickyDiv");
+      var stickyDivTop = stickyDiv.offsetTop;
+      var header_area = document.getElementById("header");
+      var home = document.getElementById("home");
+      var features = document.getElementById("features");
+      var about = document.getElementById("about");
+      var contact = document.getElementById("contact");
+      var getstarted = document.getElementById("getstarted");
+      if (window.pageYOffset > stickyDivTop) {
+        stickyDiv.style.position = "fixed";
+        stickyDiv.style.top = "0";
+        stickyDiv.style.width = "1903px";
+        header_area.style.backgroundColor = "white";
+        header_area.style.boxShadow = "0px 4px 6px 0px rgba(12, 0, 46, 0.06)";
+        header_area.style.width = "100%";
+        header_area.style.left = "0";
+        header_area.style.top = "0";
+        header_area.style.position = "fixed";
+        home.style.color = "black";
+        features.style.color = "black";
+        about.style.color = "black";
+        contact.style.color = "black";
+        getstarted.style.color = "blue";
+        getstarted.style.borderColor = "orange";
+      } else {
+        stickyDiv.style.position = "relative";
+        stickyDiv.style.top = "auto";
+        header_area.style.backgroundColor = "transparent";
+        header_area.style.boxShadow = "none";
+        header_area.style.width = "100%";
+        header_area.style.left = "0";
+        header_area.style.top = "0";
+        home.style.color = "white";
+        features.style.color = "white";
+        about.style.color = "white";
+        contact.style.color = "white";
+        getstarted.style.color = "blue";
+        getstarted.style.borderColor = "white";
+      }
+    };
+  </script>
 </html>
