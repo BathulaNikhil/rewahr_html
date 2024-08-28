@@ -83,6 +83,7 @@
       }
       input[type="text"],
       input[type="email"],
+      input[type="state"],
       input[type="password"] {
         width: 96%;
         padding: 10px;
@@ -179,6 +180,13 @@
           placeholder="Enter Your Email"
           required
         />
+        <label for="state">State</label>
+        <input
+          type="state"
+          id="state"
+          placeholder="Enter Your state"
+          required
+        />
         <label for="country">Country</label>
         <div class="country-input">
           <input type="tel" id="phone" placeholder="Enter Number" required />
@@ -204,6 +212,18 @@
       initialCountry: "in", // Sets India as the default country
       utilsScript:
         "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.19/js/utils.js", // For formatting/validation
+    });
+    phoneInputField.addEventListener("countrychange", function () {
+      const currentCountry = phoneInput.getSelectedCountryData().name;
+      console.log(currentCountry);
+    });
+    // when the user clicks the submit button
+    document.querySelector("button").addEventListener("click", function (e) {
+      e.preventDefault();
+      const phoneNumber = phoneInput.getNumber();
+      const phoneCountry = phoneInput.getSelectedCountryData().name; // Get the country name
+      console.log(phoneCountry);
+      console.log(phoneNumber);
     });
   </script>
 </html>
