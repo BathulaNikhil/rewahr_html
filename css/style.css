@@ -10860,6 +10860,17 @@ address {
   font-style: normal;
   line-height: inherit;
 }
+
+.get_started_three .get_btn_info .get_btn_item .icon_one i {
+          color: #FF6C84;
+          padding-top: 30px;
+          display: inline-block;
+        }
+ 
+ 
+.get_started_three .get_btn_info .get_btn_item .icon_one {
+          background: #FFF1F3;
+        }
 dl,
 ol,
 ul {
