@@ -179,6 +179,11 @@
         border-color: #000;
         box-shadow: 0 0 0 1px #000;
       }
+      .error-message {
+        color: red;
+        margin-top: 10px;
+        font-size: 14px;
+      }
     </style>
   </head>
   <body>
@@ -248,6 +253,7 @@
           </div>
           <button type="submit">Sign Up</button>
         </form>
+        <div id="errorMessages" class="error-message"></div>
       </div>
     </div>
   </body>
@@ -294,23 +300,34 @@
           },
           body: JSON.stringify(data),
         })
-          .then((response) => {
-            if (response.ok) {
-              return response.json();
-            } else {
-              throw new Error("Network response was not ok");
+          .then((response) => response.json())
+          .then((responseData) => {
+            // Clear previous error messages
+            document.getElementById("errorMessages").innerHTML = "";
+
+            // Handle errors
+            if (responseData.Error && responseData.Error.length > 0) {
+              const errorMessages = responseData.Error.join("<br>");
+              document.getElementById("errorMessages").innerHTML =
+                errorMessages;
+            }
+
+            // Handle info
+            if (responseData.Info && responseData.Info.length > 0) {
+              responseData.Info.forEach((info) => console.log(info));
+            }
+
+            // Handle link
+            if (responseData.Link && responseData.Link.length > 0) {
+              const link = responseData.Link[0];
+              alert(`Your dashboard is ready at: ${link}`);
+              window.open(link, "_blank");
             }
           })
-          .then((responseData) => {
-            // Handle successful response
-            console.log("User created successfully:", responseData);
-            alert("Signup successful!");
-            window.open("https://" + data.domain + ".rewahr.com", "_blank");
-          })
           .catch((error) => {
-            // Handle errors
-            console.error("There was a problem with the signup:", error);
-            alert("Signup failed. Please try again." + error);
+            console.error("Error:", error);
+            document.getElementById("errorMessages").innerHTML =
+              "An error occurred. Please try again.";
           });
       });
   </script>
