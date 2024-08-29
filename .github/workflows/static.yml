@@ -14,8 +14,6 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-  build-web:
-    runs-on: self-hosted
   deploy:
     runs-on: ubuntu-latest
     steps:
