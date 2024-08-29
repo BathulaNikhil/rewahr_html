@@ -44276,7 +44276,7 @@ a .h_head:hover {
   }
 }
 
-@media (width: 2560px) {
+@media (min-width: 2560px) {
   .stratup_app_screen .phone {
     bottom: -220px;
     left: 350px;
