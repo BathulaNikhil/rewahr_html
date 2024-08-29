@@ -1,0 +1,28 @@
+name: Deploy static content to server
+
+on:
+  # Runs on pushes targeting the default branch
+  push:
+    branches: ["main"]
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+# Allow only one concurrent deployment
+concurrency:
+  group: "deployment"
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        
+      - name: Upload files to server
+        run: |
+           scp -r images root@65.109.113.90:/var/www/html/www.rewahr.com
+           scp -r css root@65.109.113.90:/var/www/html/www.rewahr.com
+           scp *.html root@65.109.113.90:/var/www/html/www.rewahr.com
+           scp -r components root@65.109.113.90:/var/www/html/www.rewahr.com
