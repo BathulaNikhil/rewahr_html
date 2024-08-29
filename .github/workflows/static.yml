@@ -1,14 +1,10 @@
-name: Deploy static content to server
+name: Deploy Web
 
 on:
-  # Runs on pushes targeting the default branch
   push:
     branches: ["main"]
-
-  # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
-# Allow only one concurrent deployment
 concurrency:
   group: "deployment"
   cancel-in-progress: false
@@ -21,8 +17,13 @@ jobs:
         uses: actions/checkout@v4
         
       - name: Upload files to server
+        shell : bash
+        env:
+          HOST: 65.109.113.90
+          USER: root
+          TARGET: /var/www/html/www.rewahr.com
         run: |
-           scp -r images root@65.109.113.90:/var/www/html/www.rewahr.com
-           scp -r css root@65.109.113.90:/var/www/html/www.rewahr.com
-           scp *.html root@65.109.113.90:/var/www/html/www.rewahr.com
-           scp -r components root@65.109.113.90:/var/www/html/www.rewahr.com
+          scp -r images $USER@$HOST:$TARGET
+          scp -r css $USER@$HOST:$TARGET
+          scp *.html $USER@$HOST:$TARGET
+          scp -r components $USER@$HOST:$TARGET
