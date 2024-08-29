@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
     <link rel="stylesheet" href="/css/style.css" />
     <link
@@ -49,11 +49,11 @@
                     >
                       <ul class="navbar-nav menu ml-auto undefined">
                         <li class="nav-item">
-                          <a class="nav-link" title="Home" href="index.html">Home</a>
+                          <a class="nav-link" title="Home" href="/index.html">Home</a>
                         </li>
                         <li class="nav-item">
                           <a
-                            class="nav-link"
+                            class="nav-link active"
                             title="Features"
                             href="features.html"
                             >Features</a
@@ -65,7 +65,7 @@
                           >
                         </li>
                         <li class="nav-item">
-                          <a class="nav-link active" title="Pricing" href="contact.html"
+                          <a class="nav-link" title="Pricing" href="contact.html"
                             >Contact</a
                           >
                         </li>
@@ -82,96 +82,254 @@
       <section class="error_two_area"></section>
       <div class="jumbotron">
         <center>
-          <h2 style="color: rgb(255, 255, 255)">Contact</h2>
-          <p style="color: rgb(255, 255, 255)"></p>
+          <h2 style="color: rgb(255, 255, 255)">
+            Travel &amp; Expense Tracker
+          </h2>
+          <p style="color: rgb(255, 255, 255)">
+            Keep a close eye on your expenses, while sufficiently allocating
+            funds to needs.
+          </p>
         </center>
       </div>
-      <br />
-      <section class="contact_info_area sec_pad bg_color">
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-3">
-              <div class="contact_info_item">
-                <h6 class="f_p f_size_20 t_color3 f_500 mb_20">Locations</h6>
-                <br />
-                <h6 class="f_p f_size_20 t_color3 f_500 mb_20">California</h6>
-                <p class="f_400 f_size_15">
-                  3100 Mowry Ave, Suite 205,<br />Fremont, CA 94538<br />Phone:
-                  +1-510-226-6320
-                </p>
-                <hr />
-                <h6 class="f_p f_size_20 t_color3 f_500 mb_20">Utah</h6>
-                <p class="f_400 f_size_15">
-                  9980 South 300 West Suite,<br />#200 Sandy, UT 84070<br />Phone:
-                  +1-801-285-7467
-                </p>
-              </div>
-              <div class="contact_info_item">
-                <h6 class="f_p f_size_20 t_color3 f_500 mb_20">E-Mail</h6>
-                <p class="f_400 f_size_15">
-                  <span class="f_400 t_color3">Email:</span>
-                  <a href="mailto:info@rewahr.com">info@rewahr.com</a>
-                </p>
-              </div>
-            </div>
-            <div class="contact_form col-lg-9">
-              <h2 class="f_p f_size_22 t_color3 f_600 l_height28 mb_40">
-                Leave a Message
-              </h2>
-              <form class="contact_form_box" method="post" id="contactForm">
-                <div class="row">
-                  <div class="col-lg-6">
-                    <div class="form-group text_box">
-                      <input
-                        type="text"
-                        id="name"
-                        name="name"
-                        placeholder="Your Name"
-                      />
-                    </div>
-                  </div>
-                  <div class="col-lg-6">
-                    <div class="form-group text_box">
-                      <input
-                        type="text"
-                        name="email"
-                        id="email"
-                        placeholder="Your Email"
-                      />
-                    </div>
-                  </div>
-                  <div class="col-lg-12">
-                    <div class="form-group text_box">
-                      <input
-                        type="text"
-                        id="subject"
-                        name="subject"
-                        placeholder="Subject"
-                      />
-                    </div>
-                  </div>
-                  <div class="col-lg-12">
-                    <div class="form-group text_box">
-                      <textarea
-                        name="message"
-                        id="message"
-                        cols="30"
-                        rows="10"
-                        placeholder="Enter Your Message . . ."
-                      ></textarea>
-                    </div>
-                  </div>
-                </div>
-                <button type="submit" class="btn_three">Send Message</button>
-              </form>
-              <div id="success">Your message succesfully sent!</div>
-              <div id="error">
-                Opps! There is something wrong. Please try again
-              </div>
-            </div>
+      <div class="container">
+        <li>
+          Rewa HR Expense module manages employee travel requests, expense
+          claims and travel claims quickly and easily.
+        </li>
+        <li>Create specific expense forms to correspond with expense types.</li>
+        <li>Easily Manage Multi-Currency Claims.</li>
+        <li>Manage Expense Type based on Employee Eligibility.</li>
+        <li>Comprehensive Travel &amp; Expense based Reporting.</li>
+        <br />
+      </div>
+      <div
+        style="
+          box-sizing: border-box;
+          position: relative;
+          margin-left: auto;
+          margin-right: auto;
+          padding-left: 15px;
+          padding-right: 15px;
+          max-width: 1540px;
+        "
+      >
+        <div
+          style="
+            margin-left: -15px;
+            margin-right: -15px;
+            display: flex;
+            flex-flow: wrap;
+            flex-grow: 0;
+            flex-shrink: 0;
+            align-items: normal;
+            justify-content: flex-start;
+          "
+        >
+          <div
+            style="
+              box-sizing: border-box;
+              min-height: 1px;
+              position: relative;
+              padding-left: 15px;
+              padding-right: 15px;
+              width: 66.6667%;
+              flex: 0 0 66.6667%;
+              max-width: 66.6667%;
+              margin-left: 0%;
+              right: auto;
+              left: auto;
+            "
+          >
+            <h4>Currency Exchange Rates</h4>
+            <p>
+              Organizations may work with a base currency (mostly referred as
+              local currency)of its country. However, the expenses incurred may
+              not be from the same currency as your local currency. So it is
+              vital to set up the currency exchange rates in the system to
+              support multi-currency estimates and claims.
+            </p>
+          </div>
+          <div
+            style="
+              box-sizing: border-box;
+              min-height: 1px;
+              position: relative;
+              padding-left: 15px;
+              padding-right: 15px;
+              width: 33.3333%;
+              flex: 0 0 33.3333%;
+              max-width: 33.3333%;
+              margin-left: 0%;
+              right: auto;
+              left: auto;
+            "
+          >
+            <img src="/images/media/travelexpense.8d8950db.png" alt="" />
           </div>
         </div>
-      </section>
+        <br /><br />
+        <div
+          style="
+            margin-left: -15px;
+            margin-right: -15px;
+            display: flex;
+            flex-flow: wrap;
+            flex-grow: 0;
+            flex-shrink: 0;
+            align-items: normal;
+            justify-content: flex-start;
+          "
+        >
+          <div
+            style="
+              box-sizing: border-box;
+              min-height: 1px;
+              position: relative;
+              padding-left: 15px;
+              padding-right: 15px;
+              width: 50%;
+              flex: 0 0 50%;
+              max-width: 50%;
+              margin-left: 0%;
+              right: auto;
+              left: auto;
+            "
+          >
+            <img src="/images/media/travelexpense2.05bf7fb0.png" alt="" />
+          </div>
+          <div
+            style="
+              box-sizing: border-box;
+              min-height: 1px;
+              position: relative;
+              padding-left: 15px;
+              padding-right: 15px;
+              width: 50%;
+              flex: 0 0 50%;
+              max-width: 50%;
+              margin-left: 0%;
+              right: auto;
+              left: auto;
+            "
+          >
+            <h4>Eligibility Groups</h4>
+            <p>Eligibility groups are used to define eligibility on expenses</p>
+            <p>
+              Eligibility Groups can be created based on Job Title, Job
+              Categories, Employment Status, Location, Service Period or any
+              custom field.
+            </p>
+          </div>
+        </div>
+        <br /><br />
+        <div
+          style="
+            margin-left: -15px;
+            margin-right: -15px;
+            display: flex;
+            flex-flow: wrap;
+            flex-grow: 0;
+            flex-shrink: 0;
+            align-items: normal;
+            justify-content: flex-start;
+          "
+        >
+          <div
+            style="
+              box-sizing: border-box;
+              min-height: 1px;
+              position: relative;
+              padding-left: 15px;
+              padding-right: 15px;
+              width: 50%;
+              flex: 0 0 50%;
+              max-width: 50%;
+              margin-left: 0%;
+              right: auto;
+              left: auto;
+            "
+          >
+            <h4>Expense Types</h4>
+            <p>
+              There can be different expense types users can use to submit
+              estimates and claims. Multiple different expense types can be set
+              from pre-defined templates.
+            </p>
+          </div>
+          <div
+            style="
+              box-sizing: border-box;
+              min-height: 1px;
+              position: relative;
+              padding-left: 15px;
+              padding-right: 15px;
+              width: 50%;
+              flex: 0 0 50%;
+              max-width: 50%;
+              margin-left: 0%;
+              right: auto;
+              left: auto;
+            "
+          >
+            <img src="/images/media/travelexpense1.c6667bc0.png" alt="" />
+          </div>
+        </div>
+        <div
+          style="
+            margin-left: -15px;
+            margin-right: -15px;
+            display: flex;
+            flex-flow: wrap;
+            flex-grow: 0;
+            flex-shrink: 0;
+            align-items: normal;
+            justify-content: flex-start;
+          "
+        >
+          <div
+            style="
+              box-sizing: border-box;
+              min-height: 1px;
+              position: relative;
+              padding-left: 15px;
+              padding-right: 15px;
+              width: 50%;
+              flex: 0 0 50%;
+              max-width: 50%;
+              margin-left: 0%;
+              right: auto;
+              left: auto;
+            "
+          >
+            <img src="/images/media/travelexpense3.6f5c559c.png" alt="" />
+          </div>
+          <div
+            style="
+              box-sizing: border-box;
+              min-height: 1px;
+              position: relative;
+              padding-left: 15px;
+              padding-right: 15px;
+              width: 50%;
+              flex: 0 0 50%;
+              max-width: 50%;
+              margin-left: 0%;
+              right: auto;
+              left: auto;
+            "
+          >
+            <h4>Travel Requests Management</h4>
+            <p>
+              The travel request approval process is essential for every
+              business as facilitating your employees to travel easily will
+              enable them to carry out their work more efficiently. Travel
+              Requests allow Employees to plan and estimate the costs of their
+              travel and receive upfront approval
+            </p>
+          </div>
+        </div>
+        <span style="display: table; clear: both"></span>
+      </div>
       <footer class="footer_area footer_area_four f_bg undefined">
         <div class="footer_top">
           <div class="container">
@@ -241,9 +399,9 @@
                     About Us
                   </h3>
                   <ul class="list-unstyled f_list">
-                    <li><a href="index.html">Company</a></li>
-                    <li><a href="index.html">Jobs</a></li>
-                    <li><a href="index.html">Sitemap</a></li>
+                    <li><a href="/index.html">Company</a></li>
+                    <li><a href="/index.html">Jobs</a></li>
+                    <li><a href="/index.html">Sitemap</a></li>
                   </ul>
                 </div>
               </div>
@@ -294,10 +452,10 @@
                     Security Policy
                   </h3>
                   <ul class="list-unstyled f_list">
-                    <li><a href="index.html">Privacy Policy</a></li>
-                    <li><a href="index.html">Service Privacy Policy</a></li>
-                    <li><a href="index.html">Business Policy</a></li>
-                    <li><a href="index.html">General Public License</a></li>
+                    <li><a href="/index.html">Privacy Policy</a></li>
+                    <li><a href="/index.html">Service Privacy Policy</a></li>
+                    <li><a href="/index.html">Business Policy</a></li>
+                    <li><a href="/index.html">General Public License</a></li>
                   </ul>
                 </div>
               </div>
