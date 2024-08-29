@@ -23902,7 +23902,7 @@ button:focus {
 
 .stratup_app_screen .phone {
   bottom: -220px;
-  left: 0;
+  left: 0px;
 }
 
 .stratup_app_screen .laptop {
@@ -44273,6 +44273,13 @@ a .h_head:hover {
   .chat_clients_feedback.feedback_two .clients_feedback_item .feedback_body {
     margin-right: -138px;
     padding-left: 25px;
+  }
+}
+
+@media (width: 2560px) {
+  .stratup_app_screen .phone {
+    bottom: -220px;
+    left: 350px;
   }
 }
 

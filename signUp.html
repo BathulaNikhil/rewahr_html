@@ -12,9 +12,6 @@
       rel="stylesheet"
     />
     <style>
-      * {
-        box-sizing: border-box;
-      }
       body {
         font-family: "Nunito Sans", sans-serif;
         margin: 0;
@@ -23,50 +20,76 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        min-height: 100vh;
+        height: 100vh;
       }
       .modal {
         background-color: white;
         border-radius: 8px;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        width: 95%;
-        max-width: 800px;
+        display: flex;
+        width: 800px;
         overflow: hidden;
       }
       .left-panel {
         background-color: #00a0e9;
         color: white;
-        padding: 20px;
+        padding: 40px;
+        width: 40%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        position: relative;
+        overflow: hidden;
+      }
+      .left-panel::before,
+      .left-panel::after {
+        content: "";
+        position: absolute;
+        width: 350px;
+        height: 350px;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.1);
+      }
+      .left-panel::before {
+        bottom: -150px;
+        left: -150px;
+      }
+      .left-panel::after {
+        top: -150px;
+        right: -150px;
+      }
+      .modal-left p {
+        font-size: 18px;
         text-align: center;
+        z-index: 1;
       }
       .modal-right {
-        padding: 20px;
+        padding: 30px;
       }
-      h1,
       h2 {
-        margin: 10px 0;
+        margin-top: 0;
+        margin-bottom: 10px;
+        font-size: 24px;
       }
       p {
-        margin: 10px 0;
+        margin-top: 0;
+        margin-bottom: 20px;
         color: #666;
         font-size: 14px;
       }
       label {
-        display: block;
         margin-top: 15px;
         margin-bottom: 5px;
         font-weight: 600;
         font-size: 14px;
+        margin-bottom: 4px;
       }
       input[type="text"],
       input[type="email"],
-      input[type="password"],
-      .country-input {
-        width: 100%;
+      input[type="state"],
+      input[type="password"] {
+        width: 96%;
         padding: 10px;
-        margin-bottom: 15px;
-        border: 1px solid #ddd;
-        border-radius: 4px;
         font-family: "Nunito Sans", sans-serif;
         font-size: 14px;
       }
@@ -84,14 +107,28 @@
         margin-top: 20px;
       }
       .country-input {
+        border: 1px solid #ccc;
         display: flex;
         align-items: center;
+        padding: 10px;
+        margin-bottom: 10px;
+        border-radius: 4px;
+        font-family: "Nunito Sans", sans-serif;
+      }
+      .country-input img {
+        margin-right: 10px;
       }
       .country-input input {
         border: none;
+        margin-bottom: 0;
         outline: none;
         flex-grow: 1;
         padding: 5px 0;
+        font-family: "Nunito Sans", sans-serif;
+      }
+      .country-input:focus-within {
+        border-color: #000;
+        border-width: 2px;
       }
       .sign-in-link {
         text-align: center;
@@ -106,59 +143,41 @@
       .text-center {
         text-align: center;
       }
-      @keyframes dots {
-        0%,
-        20% {
-          color: rgba(0, 0, 0, 0);
-          text-shadow: 0.25em 0 0 rgba(0, 0, 0, 0), 0.5em 0 0 rgba(0, 0, 0, 0);
-        }
-        40% {
-          color: black;
-          text-shadow: 0.25em 0 0 rgba(0, 0, 0, 0), 0.5em 0 0 rgba(0, 0, 0, 0);
-        }
-        60% {
-          text-shadow: 0.25em 0 0 black, 0.5em 0 0 rgba(0, 0, 0, 0);
-        }
-        80%,
-        100% {
-          text-shadow: 0.25em 0 0 black, 0.5em 0 0 black;
-        }
-      }
 
-      @media (min-width: 768px) {
-        .modal {
-          display: flex;
-        }
-        .left-panel {
-          width: 40%;
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          padding: 40px;
-          position: relative;
-          overflow: hidden;
-        }
-        .left-panel::before,
-        .left-panel::after {
-          content: "";
-          position: absolute;
-          width: 350px;
-          height: 350px;
-          border-radius: 50%;
-          background: rgba(255, 255, 255, 0.1);
-        }
-        .left-panel::before {
-          bottom: -150px;
-          left: -150px;
-        }
-        .left-panel::after {
-          top: -150px;
-          right: -150px;
-        }
-        .modal-right {
-          width: 60%;
-          padding: 30px;
-        }
+      .subdomain-container {
+        display: flex;
+        align-items: center; /* Align items vertically */
+        width: 100%;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        overflow: hidden;
+        transition: border-color 0.3s ease;
+      }
+      .subdomain-input {
+        border: none;
+        padding: 10px;
+        flex-grow: 1;
+        font-size: 14px;
+        outline: none;
+      }
+      .domain-suffix {
+        padding: 10px 12px; /* Add padding to match input padding */
+        font-size: 14px;
+        color: #666;
+        background-color: #f5f5f5; /* Light background for suffix */
+        border-left: 1px solid #ddd; /* Border between input and suffix */
+        white-space: nowrap;
+        box-sizing: border-box; /* Ensures padding and width are considered */
+      }
+      label {
+        display: block;
+        margin-bottom: 5px;
+        font-weight: bold;
+        font-size: 14px;
+      }
+      .subdomain-container:focus-within {
+        border-color: #000;
+        box-shadow: 0 0 0 1px #000;
       }
     </style>
   </head>
@@ -169,14 +188,14 @@
         <h2>Signup to Dashboard</h2>
       </div>
       <div class="modal-right">
-        <div class="text-center">
-          <h2>Sign Up</h2>
-          <p>
-            Sign up With Your Email That You Want Create Enter The Details
-            Below.
-          </p>
-        </div>
         <form id="signupForm">
+          <div class="text-center">
+            <h2>Sign Up</h2>
+            <p>
+              Sign up With Your Email That You Want Create Enter The Details
+              Below.
+            </p>
+          </div>
           <label for="fullname">Full Name</label>
           <input
             type="text"
@@ -198,18 +217,11 @@
             placeholder="Enter Your Email"
             required
           />
-          <label for="password">Password</label>
-          <input
-            type="password"
-            id="password"
-            placeholder="Enter Your Password"
-            required
-          />
           <label for="state">State</label>
           <input
-            type="text"
+            type="state"
             id="state"
-            placeholder="Enter Your State"
+            placeholder="Enter Your state"
             required
           />
           <label for="country">Country</label>
@@ -217,17 +229,18 @@
             <input type="tel" id="phone" placeholder="Enter Number" required />
           </div>
           <label for="subdomain">Sub Domain Name</label>
-          <input
-            type="text"
-            id="subdomain"
-            placeholder="Enter Your Domain Name (e.g., yourdomain.rewahr.com)"
-            required
-          />
-          <button type="submit" id="submit">Sign Up</button>
+          <div class="subdomain-container">
+            <input
+              type="text"
+              id="subdomain"
+              class="subdomain-input"
+              placeholder="Enter Your Domain Name"
+              oninput="validateSubdomainInput(this)"
+            />
+            <span class="domain-suffix">.rewahr.com</span>
+          </div>
+          <button type="submit">Sign Up</button>
         </form>
-        <div class="sign-in-link">
-          <p>Already Have an Account? <a href="#">Sign In</a></p>
-        </div>
       </div>
     </div>
   </body>
@@ -239,6 +252,10 @@
       utilsScript:
         "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.19/js/utils.js",
     });
+
+    function validateSubdomainInput(input) {
+      input.value = input.value.replace(/[^a-z0-9]/g, "");
+    }
 
     document
       .getElementById("signupForm")
@@ -254,14 +271,13 @@
 
         const data = {
           company: document.getElementById("company").value,
-          domain: document.getElementById("subdomain").value,
+          domain: document.getElementById("subdomain").value.toLowerCase(),
           firstName: firstName,
           lastName: lastName,
           email: document.getElementById("email").value,
           password: document.getElementById("password").value,
           state: document.getElementById("state").value,
           country: phoneCountry,
-          phoneNumber: phoneNumber,
         };
 
         fetch("https://www.rewahr.com/api/create", {
@@ -282,6 +298,7 @@
             // Handle successful response
             console.log("User created successfully:", responseData);
             alert("Signup successful!");
+            window.open("https://" + data.domain + ".rewahr.com", "_blank");
           })
           .catch((error) => {
             // Handle errors
